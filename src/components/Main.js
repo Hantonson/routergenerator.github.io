@@ -11,7 +11,7 @@ const Main = () => {
 
     const generateCode = (routerName, endpoints) => {
         let code = `import express, { Request, Response } from \'express\'`
-            + `\n\nconst ${routerName} = express.Router();`;
+            + `\n\nconst ${routerName} = express.Router();\n\n`;
         endpoints.forEach((endpoint) => {
             code += `/**\n *@author:\n *@description:\n *@returns:\n */\n` +
                 `${routerName}.${endpoint.operation.toLowerCase()}('${endpoint.route}', async (req : Request, res : Response)=>{\n\t//TODO: Code goes here\n});`
