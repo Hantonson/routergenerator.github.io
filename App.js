@@ -1,7 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
 import {Pressable, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {CardContainer} from "./src/components/CardContainer";
-import {useContext, useState} from "react";
+import {useState} from "react";
 import CodeContainer from "./src/components/CodeContainer";
 
 export default function App() {
