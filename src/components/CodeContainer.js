@@ -1,5 +1,5 @@
 import {Card} from "./Card";
-import {Alert, Pressable, StyleSheet, Text, View} from "react-native";
+import {Pressable, StyleSheet, Text, View} from "react-native";
 import {ScrollView} from "react-native-web";
 import {useState} from "react";
 
