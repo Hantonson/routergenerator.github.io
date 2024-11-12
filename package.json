@@ -2,7 +2,7 @@
   "name": "apiroutergenerator",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "https://routergenerator.github.io/github.com/Hantonson",
+  "homepage": "https://routergenerator.github.io/",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
