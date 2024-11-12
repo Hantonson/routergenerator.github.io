@@ -2,14 +2,14 @@
   "name": "apiroutergenerator",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "https://routergenerator.github.io/",
+  "homepage": "https://hantonson.github.io/routergenerator.github.io/",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "predeploy": "",
-    "deploy": "gh-pages -d ./"
+    "predeploy": "npx expo export:web",
+    "deploy": "gh-pages -d web-build"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.1.3",
@@ -18,7 +18,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.73.6",
-    "react-native-web": "~0.19.6"
+    "react-native-web": "~0.19.6",
+    "@expo/webpack-config": "~19.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
