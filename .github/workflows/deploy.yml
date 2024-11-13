@@ -1,8 +1,8 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+# Workflow for building and deploying Expo app site to GitHub Pages
+name: Deploy Expo app with GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on pushes targeting the deploy branch
   push:
     branches: ["feature/deployment"]
 
@@ -37,10 +37,9 @@ jobs:
       #Run web export
       - name: Ensure permissions
         run: chmod +x ./node_modules/.bin/expo
+
       - name: Build web from src
         run: npx expo export:web
-      - name: Show Web-build
-        run: echo "$PWD" && ls -A -R web-build
 
   # Build job
   build:
@@ -51,13 +50,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ../../web-build
-          destination: ./_site
-      - name: Upload artifact
+      - name: Upload web-build as artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'web-build'
 
   # Deployment job
   deploy:
