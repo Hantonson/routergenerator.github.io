@@ -39,6 +39,8 @@ jobs:
         run: chmod +x ./node_modules/.bin/expo
       - name: Build web from src
         run: npx expo export:web
+      - name: Show Web-build
+        run: ll web-build
 
   # Build job
   build:
