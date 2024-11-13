@@ -40,7 +40,7 @@ jobs:
       - name: Build web from src
         run: npx expo export:web
       - name: Show Web-build
-        run: ls -a -r web-build
+        run: echo "$PWD" && ls -A -R web-build
 
   # Build job
   build:
