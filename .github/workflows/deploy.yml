@@ -41,6 +41,9 @@ jobs:
       - name: Build web from src
         run: npx expo export:web
 
+      - name: Debug directory
+        run: ls -R
+
   # Build job
   build:
     runs-on: ubuntu-latest
@@ -50,6 +53,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Debug initial (find web-build dir)
+        run: ls -R
+
       - name: Upload web-build as artifact
         uses: actions/upload-pages-artifact@v3
         with:
